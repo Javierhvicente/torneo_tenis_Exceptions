@@ -26,7 +26,6 @@ dependencies {// Logger
     testImplementation("io.mockk:mockk:1.13.10")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation(kotlin("test"))
 }
 

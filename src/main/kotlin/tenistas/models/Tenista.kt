@@ -1,5 +1,6 @@
 package tenistas.models
 
+import kotlinx.serialization.Serializable
 import java.time.LocalDate
 import java.time.LocalDateTime
 
@@ -18,6 +19,7 @@ import java.time.LocalDateTime
  * @author Javier Hernández
  * @since 1.0
  */
+
 data class Tenista(
     val id: Long=-1,
     var nombre: String,
