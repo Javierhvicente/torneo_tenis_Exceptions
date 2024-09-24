@@ -119,4 +119,16 @@ class TenistasRepositoryImplTest {
         assertNotEquals(nadal, result)
     }
 
+    @Test
+    fun deleteById() {
+        val result = repository.deleteById(nadal.id)
+        assertEquals(nadal, result)
+    }
+
+    @Test
+    fun deleteNotFound() {
+        val result = repository.deleteById(9999999999999999L)
+        assertEquals(null, result)
+    }
+
 }
