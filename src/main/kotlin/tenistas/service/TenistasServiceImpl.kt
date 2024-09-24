@@ -1,6 +1,5 @@
 package tenistas.service
 
-import com.github.michaelbull.result.*
 import org.lighthousegames.logging.logging
 import tenistas.cache.CacheTenistasImpl
 import tenistas.exceptions.FileException
