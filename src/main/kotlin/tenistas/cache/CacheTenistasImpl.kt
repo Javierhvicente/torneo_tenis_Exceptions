@@ -1,12 +1,9 @@
 package tenistas.cache
 
-import com.github.michaelbull.result.Err
-import com.github.michaelbull.result.Ok
-import com.github.michaelbull.result.Result
-import config.Config.cacheSize
+
 import tenistas.mapper.logger
 import tenistas.models.Tenista
-import java.util.UUID
+
 
 /**
  * Cache de almacenamiento de tenistas
