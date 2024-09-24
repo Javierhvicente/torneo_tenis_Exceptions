@@ -14,7 +14,8 @@ import java.util.UUID
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class CacheTenistasImplTest {
     private val cache = CacheTenistasImpl(Config.cacheSize)
-    val nadal = Tenista(1L ,"Rafael nadal", "Argentina", 185, 75, 2650, "Derecha", LocalDate.of(1985, 10, 25), LocalDateTime.now(), LocalDateTime.now())
+    val nadal = Tenista(1L, "Rafael Nadal", "España", 185, 75, 2650, "Derecha", LocalDate.of(1986, 6, 3), LocalDateTime.now(), LocalDateTime.now())
+
     @BeforeEach
     fun setUp() {
         cache.clear()
@@ -25,18 +26,19 @@ class CacheTenistasImplTest {
         cache.put(nadal.id, nadal)
         val result = cache.get(nadal.id)
         assertAll(
-            { assertEquals(cache.size, 1) },
+            { assertEquals(cache.getCurrentSize(), 1) },
             { assertNotNull(result) },
             { assertEquals(nadal, result) }
         )
     }
+
     @Test
     fun getNotFound() {
         cache.put(nadal.id, nadal)
         val result = cache.get(2L)
 
         assertAll(
-            { assertEquals(cache.size, 1) },
+            { assertEquals(cache.getCurrentSize(), 1) },
             { assertNull(result) }
         )
     }
@@ -47,7 +49,7 @@ class CacheTenistasImplTest {
         val result = cache.get(nadal.id)
 
         assertAll(
-            { assertEquals(cache.size, 1) },
+            { assertEquals(cache.getCurrentSize(), 1) },
             { assertNotNull(result) },
             { assertEquals(nadal, result) }
         )
@@ -59,10 +61,9 @@ class CacheTenistasImplTest {
         cache.remove(nadal.id)
         val result = cache.get(nadal.id)
 
-        // Assert
         assertAll(
-            { assertEquals(cache.size, 0) },
-            { assertNull(result) },
+            { assertEquals(cache.getCurrentSize(), 0) },
+            { assertNull(result) }
         )
     }
 
@@ -71,7 +72,7 @@ class CacheTenistasImplTest {
         cache.put(nadal.id, nadal)
         cache.clear()
         assertAll(
-            { assertEquals(cache.size, 0) }
+            { assertEquals(cache.getCurrentSize(), 0) }
         )
     }
 
@@ -79,7 +80,7 @@ class CacheTenistasImplTest {
     fun size() {
         cache.put(nadal.id, nadal)
         assertAll(
-            { assertEquals(cache.size, 1) }
+            { assertEquals(cache.getCurrentSize(), 1) }
         )
     }
 }

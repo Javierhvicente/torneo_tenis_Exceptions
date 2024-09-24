@@ -1,6 +1,5 @@
 package tenistas.cache
 
-
 import tenistas.mapper.logger
 import tenistas.models.Tenista
 
@@ -12,7 +11,7 @@ import tenistas.models.Tenista
  * @since 1.0
  */
 class CacheTenistasImpl(
-    val size: Int
+    var size: Int
 ): Cache<Long, Tenista> {
     private val cache = mutableMapOf<Long, Tenista>()
 
@@ -58,4 +57,9 @@ class CacheTenistasImpl(
         logger.debug { "Limpiando cache" }
         cache.clear()
     }
+
+    fun getCurrentSize(): Int {
+        return cache.size
+    }
+
 }
