@@ -27,3 +27,42 @@
 2024-09-24 10:42:30 [Test worker] ERROR tenistas.validators.CsvValidatorKt - Numero de filas incorrecto
 2024-09-24 10:42:44 [Test worker] ERROR tenistas.validators.CsvValidatorKt - Numero de columnas incorrecto
 2024-09-24 10:42:45 [Test worker] ERROR tenistas.validators.CsvValidatorKt - Numero de filas incorrecto
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al obtener el Tenista: no such column: 'manos'
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al obtener los Tenistas: no such column: 'manos'
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al obtener el Tenista: no such column: 'manos'
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al obtener el Tenista: no such column: 'manos'
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] WARN  t.r.TenistasRepositoryImplKt - No se encuentra el Tenista con id: 9999999999999999 para eliminar.
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al obtener el Tenista por nombre: no such column: 'manos'
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al obtener el Tenista por nombre: no such column: 'manos'
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al obtener el Tenista: no such column: 'manos'
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al obtener el Tenista por nombre: no such column: 'manos'
+2024-09-24 10:57:55 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] WARN  t.r.TenistasRepositoryImplKt - No se encuentra el Tenista con id: 9999999999999999 para eliminar.
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:00:40 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:07:09 [Test worker] WARN  t.r.TenistasRepositoryImplKt - No se encuentra el Tenista con id: 9999999999999999 para eliminar.
+2024-09-24 11:07:10 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:07:45 [Test worker] WARN  t.r.TenistasRepositoryImplKt - No se encuentra el Tenista con id: 9999999999999999 para eliminar.
+2024-09-24 11:07:46 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:12:09 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
+2024-09-24 11:26:58 [Test worker] WARN  t.r.TenistasRepositoryImplKt - No se encontró el Tenista con id: 1

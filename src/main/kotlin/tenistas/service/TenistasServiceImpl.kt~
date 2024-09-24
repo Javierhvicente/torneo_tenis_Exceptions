@@ -92,9 +92,9 @@ class TenistasServiceImpl(
      * @author Javier Hernández, Yahya el hadri , Javier Ruiz, Alvaro herrero, Samuel Cortes, Raul Fernandez
      */
 
-    override fun updateTenista(id: Long, tenista: Tenista): Tenista {
+    override fun updateTenista(: Long, tenista: Tenista): Tenista {
         logger.debug { "Updating tenista: $tenista" }
-        return tenistasRepository.updateTenista(id, tenista)
+        return tenistasRepository.updateTenista(tenista)
             ?.let {
                 cache.put(tenista.id, tenista)
                 it

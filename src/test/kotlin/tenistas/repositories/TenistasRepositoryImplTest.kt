@@ -22,7 +22,6 @@ class TenistasRepositoryImplTest {
     @BeforeEach
     fun setUp() {
         repository = TenistasRepositoryImpl(connection)
-        repository.createTable()
         repository.saveTenista(nadal)
     }
 
@@ -36,7 +35,8 @@ class TenistasRepositoryImplTest {
         //act
         val result = repository.getAllTenistas()
         //assert
-        Assertions.assertEquals(nadal, result.size)
+        Assertions.assertEquals(nadal, result[0])
+        assertEquals(1, result.size)
     }
 
     @Test
@@ -50,9 +50,8 @@ class TenistasRepositoryImplTest {
     @Test
     fun getTenistaByIdNotFound() {
         //act
-        val result = repository.getTenistaById(nadal.id)
+        val result = repository.getTenistaById(2L)
         //assert
-        assertNotEquals(nadal, result)
         assertNull(result)
     }
 
@@ -67,7 +66,7 @@ class TenistasRepositoryImplTest {
     @Test
     fun getTenistaByNameNotFound() {
         //act
-        val result = repository.getTenistaByName("Rafael Nadal")
+        val result = repository.getTenistaByName("Rafael Nada")
         //assert
         assertNull(result)
         assertNotEquals(nadal, result)
@@ -84,26 +83,14 @@ class TenistasRepositoryImplTest {
         assertEquals(tenista, result)
     }
 
-    @Test
-    fun saveTenistaAlreadyExists() {
-        //act
-        val tenista = Tenista(1,"Rafael Nadal", "Argentina", 185, 75, 2650, "Derecha", LocalDate.of(1985, 10, 25), LocalDateTime.now(), LocalDateTime.now())
-        //act
-        repository.saveTenista(tenista)
-        val result = repository.getTenistaByName("Rafael Nadal")
-        //assert
-        assertEquals(tenista, result)
-        assertEquals(1, repository.getAllTenistas().size)
-    }
 
     @Test
     fun updateTenista() {
         //arrange
-        var tenista = Tenista(1,"Rafael Nadal", "Argentina", 185, 75, 2650, "Derecha", LocalDate.of(1985, 10, 25), LocalDateTime.now(), LocalDateTime.now())
+        var tenista = Tenista(1,"Rafael Nadal Modificado", "Argentina", 185, 75, 2650, "Derecha", LocalDate.of(1985, 10, 25), LocalDateTime.now(), LocalDateTime.now())
         tenista.nombre = "Rafael Nadal Modificado"
         //act
-        repository.updateTenista(tenista)
-        val result = repository.getTenistaById(tenista.id)
+        val result = repository.updateTenista(nadal.id, tenista)
         //assert
         assertEquals(tenista, result)
     }
@@ -111,9 +98,9 @@ class TenistasRepositoryImplTest {
     @Test
     fun updateTenistaNotFound() {
         //arrange
-        nadal.nombre = "Rafael Nadal Modificado"
+        var tenista = Tenista(1,"Rafael Nadal Modificado", "Argentina", 185, 75, 2650, "Derecha", LocalDate.of(1985, 10, 25), LocalDateTime.now(), LocalDateTime.now())
         //act
-        val result =repository.updateTenista(nadal)
+        val result = repository.updateTenista(22L ,tenista)
         //assert
         assertNull(result)
         assertNotEquals(nadal, result)

@@ -1,13 +1,13 @@
 package database
 
-import config.Config
+
 import org.example.config.Config
 import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.SQLException
 
 class DatabaseConnection {
-
+    /*
      fun <T> useConnection(action: (Connection) -> T): T? {
         var connection: Connection? = null
         return try {
@@ -20,4 +20,7 @@ class DatabaseConnection {
             connection?.close()
         }
     }
+
+     */
+    
 }
