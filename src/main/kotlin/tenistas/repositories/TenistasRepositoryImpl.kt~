@@ -226,7 +226,7 @@ class TenistasRepositoryImpl(
                     statement.setString(6, tenista.mano)
                     statement.setString(7, tenista.fecha_nacimiento.toString())
                     statement.setString(8, tenista.updatedAt.toString())
-                    statement.setLong(9, id)
+                    statement.setString(9, tenista.id.toString())
 
                     val rowsAffected = statement.executeUpdate()
 

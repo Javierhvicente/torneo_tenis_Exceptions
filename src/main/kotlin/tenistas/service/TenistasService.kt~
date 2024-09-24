@@ -10,7 +10,7 @@ interface TenistasService {
     fun getTenistaById(id: Long): Tenista
     fun getTenistaByNombre(nombre: String): Tenista
     fun createTenista(tenista: Tenista): Tenista
-    fun updateTenista(id: Long, tenista: Tenista): Tenista
+    fun updateTenista(tenista: Tenista): Tenista
     fun deleteTenistaById(id: Long)
     fun readCSV(file: File): List<Tenista>
     fun writeCSV(file: File, tenistas: List<Tenista>)
