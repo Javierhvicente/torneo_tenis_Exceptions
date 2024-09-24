@@ -25,25 +25,7 @@ class TenistasRepositoryImpl(
     init {
         databaseConnection.initializeDatabase()
     }
-    fun createTable() {
-        dbConnection.useConnection { connection ->
-            val sql = """
-                CREATE TABLE IF NOT EXISTS tenistas(
-                    id INTEGER PRIMARY KEY,
-                    nombre TEXT NOT NULL,
-                    pais TEXT NOT NULL,
-                    altura INTEGER NOT NULL,
-                    peso INTEGER NOT NULL,
-                    puntos INTEGER NOT NULL,
-                    mano TEXT NOT NULL,
-                    fecha_nacimiento TEXT NOT NULL,
-                    created_at TEXT NOT NULL,
-                    updated_at TEXT NOT NULL
-                );
-            """.trimIndent()
-            connection.createStatement().execute(sql)
-        }
-    }
+
 
     /**
      * Obtiene a todos los tenistas de la base de datos
