@@ -129,7 +129,7 @@ class TenistasServiceImpl(
     override fun readCSV(file: File): List<Tenista>{
         logger.debug { "Reading CSV file: $file" }
         val lista=tenistasStorage.readCsv(file)
-        if (lista.isEmpty()) {
+        if (!lista.isEmpty()) {
             lista.forEach{p->
                 tenistasRepository.saveTenista(p)
                 logger.debug { "Stored tenista: $p" }

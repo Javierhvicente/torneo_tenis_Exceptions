@@ -5,14 +5,12 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
-import tenistas.cache.CacheTenistasImpl
 import tenistas.models.Tenista
 import java.time.LocalDate
 import java.time.LocalDateTime
-import java.util.UUID
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class CacheTenistasImplTest {
+class CacheImplTest {
     private val cache = CacheTenistasImpl(Config.cacheSize)
     val nadal = Tenista(1L, "Rafael Nadal", "España", 185, 75, 2650, "Derecha", LocalDate.of(1986, 6, 3), LocalDateTime.now(), LocalDateTime.now())
 

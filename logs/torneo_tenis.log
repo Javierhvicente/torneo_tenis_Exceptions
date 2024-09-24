@@ -66,3 +66,10 @@
 2024-09-24 11:07:46 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
 2024-09-24 11:12:09 [Test worker] ERROR t.r.TenistasRepositoryImplKt - Error al guardar el Tenista: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY KEY constraint failed (UNIQUE constraint failed: tenistas.id)
 2024-09-24 11:26:58 [Test worker] WARN  t.r.TenistasRepositoryImplKt - No se encontró el Tenista con id: 1
+2024-09-24 12:04:32 [Test worker] ERROR t.service.TenistasServiceImplKt - Error loading tenistas from file: path\to\csvfile.csv
+2024-09-24 12:08:42 [Test worker] ERROR t.service.TenistasServiceImplKt - Error loading tenistas from file: C:\Users\samue\torneo_tenis_Exceptions\build\resources\test\data.csv
+2024-09-24 12:14:41 [Test worker] ERROR t.service.TenistasServiceImplKt - Error loading tenistas from file: resources\data.csv
+2024-09-24 12:16:16 [Test worker] ERROR t.service.TenistasServiceImplKt - Error loading tenistas from file: src\test\kotlin\resources\data.csv
+2024-09-24 12:24:03 [Test worker] ERROR t.service.TenistasServiceImplKt - Error loading tenistas from file: C:\Users\samue\torneo_tenis_Exceptions\src\test\resources\data.csv
+2024-09-24 12:27:21 [Test worker] ERROR t.service.TenistasServiceImplKt - Error loading tenistas from file: C:\Users\samue\torneo_tenis_Exceptions\src\test\resources\data.csv
+2024-09-24 12:30:11 [Test worker] ERROR t.service.TenistasServiceImplKt - Error loading tenistas from file: C:\Users\samue\torneo_tenis_Exceptions\src\test\resources\data.csv
