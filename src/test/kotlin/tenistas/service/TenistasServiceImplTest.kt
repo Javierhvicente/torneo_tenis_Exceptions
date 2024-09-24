@@ -16,10 +16,9 @@ import tenistas.repositories.TenistasRepositoryImpl
 import tenistas.storage.TenistasStorageImpl
 import java.time.LocalDate
 import kotlin.test.Test
-import kotlin.test.assertTrue
 
 @ExtendWith(MockKExtension::class)
-class TeniistasServiceImplTest {
+class TenistasServiceImplTest {
 
         @MockK
         lateinit var repository: TenistasRepositoryImpl
