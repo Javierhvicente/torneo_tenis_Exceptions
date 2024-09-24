@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.assertThrows
-import tenistas.exceptions.ArgsException
 import tenistas.exceptions.CsvException
 
 class CsvValidatorKtTest {
