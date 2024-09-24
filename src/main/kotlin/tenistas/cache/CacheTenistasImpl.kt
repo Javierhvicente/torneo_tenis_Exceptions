@@ -2,7 +2,7 @@ package tenistas.cache
 
 import tenistas.mapper.logger
 import tenistas.models.Tenista
-import java.util.UUID
+
 
 /**
  * Cache de almacenamiento de tenistas
