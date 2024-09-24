@@ -48,12 +48,13 @@ class TenistasServiceImpl(
     override fun getTenistaById(id: Long): Tenista {
         logger.debug { "Getting tenista by id: $id" }
         return cache.get(id)
-            ?.let {
+            ?: run {
                 logger.debug { "Estudiante no encontrado en la cache" }
                 tenistasRepository.getTenistaById(id)
+                    ?: throw TenistaException.TenistaNotFound("Tenista no encontrado con id: $id")
             }
-            ?: throw TenistaException.TenistaNotFound("Tenista no encontrado con id: $id")
     }
+
 
 
 
@@ -128,7 +129,7 @@ class TenistasServiceImpl(
     override fun readCSV(file: File): List<Tenista>{
         logger.debug { "Reading CSV file: $file" }
         val lista=tenistasStorage.readCsv(file)
-        if (lista.isEmpty()) {
+        if (!lista.isEmpty()) {
             lista.forEach{p->
                 tenistasRepository.saveTenista(p)
                 logger.debug { "Stored tenista: $p" }
