@@ -47,12 +47,13 @@ class TenistasServiceImpl(
     override fun getTenistaById(id: Long): Tenista {
         logger.debug { "Getting tenista by id: $id" }
         return cache.get(id)
-            ?.let {
+            ?: run {
                 logger.debug { "Estudiante no encontrado en la cache" }
                 tenistasRepository.getTenistaById(id)
+                    ?: throw TenistaException.TenistaNotFound("Tenista no encontrado con id: $id")
             }
-            ?: throw TenistaException.TenistaNotFound("Tenista no encontrado con id: $id")
     }
+
 
 
 

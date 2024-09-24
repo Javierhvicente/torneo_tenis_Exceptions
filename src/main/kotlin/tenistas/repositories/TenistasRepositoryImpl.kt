@@ -170,7 +170,7 @@ class TenistasRepositoryImpl(
      * @since 1.0
      */
     override fun saveTenista(tenista: Tenista): Tenista {
-        tenistas.repositories.logger.debug { "Creando un nuevo Tenista con nombre: ${tenista.nombre}" }
+        logger.debug { "Creando un nuevo Tenista con nombre: ${tenista.nombre}" }
         val sql =
             "INSERT INTO tenistas (id, nombre, pais, altura, peso, puntos, mano, fecha_nacimiento, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         databaseConnection.useConnection { connection ->
@@ -189,7 +189,7 @@ class TenistasRepositoryImpl(
                     statement.executeUpdate()
                 }
             } catch (e: SQLException) {
-                tenistas.repositories.logger.error { "Error al guardar el Tenista: ${e.message}" }
+                logger.error { "Error al guardar el Tenista: ${e.message}" }
                 e.printStackTrace()
             }
         }

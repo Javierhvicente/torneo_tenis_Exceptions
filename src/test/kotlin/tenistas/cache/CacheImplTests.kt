@@ -1,4 +1,4 @@
-package cache
+package tenistas.cache
 
 import org.example.config.Config
 import org.junit.jupiter.api.Assertions.*
