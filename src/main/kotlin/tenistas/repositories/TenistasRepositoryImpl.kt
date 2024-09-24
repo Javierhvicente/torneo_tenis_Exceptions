@@ -171,7 +171,8 @@ class TenistasRepositoryImpl(
      */
     override fun saveTenista(tenista: Tenista): Tenista {
         tenistas.repositories.logger.debug { "Creando un nuevo Tenista con nombre: ${tenista.nombre}" }
-        val sql = "INSERT INTO tenistas (id, nombre, pais, altura, peso, puntos, mano, fecha_nacimiento, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        val sql =
+            "INSERT INTO tenistas (id, nombre, pais, altura, peso, puntos, mano, fecha_nacimiento, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         databaseConnection.useConnection { connection ->
             try {
                 connection.prepareStatement(sql).use { statement ->
@@ -250,8 +251,50 @@ class TenistasRepositoryImpl(
      */
     override fun deleteById(id: Long): Tenista? {
         logger.debug { "Eliminando el Tenista con id: $id" }
-        val result = this.getTenistaById(id) ?: return null
-        //db.deleteById(id) TODO
-        return result
+        val sqlSelect = "SELECT * FROM tenistas WHERE id = ?"
+        val sqlDelete = "DELETE FROM tenistas WHERE id = ?"
+        var deletedTenista: Tenista? = null
+
+        databaseConnection.useConnection { connection ->
+            try {
+                // Primero, obtenemos el tenista antes de eliminarlo
+                connection.prepareStatement(sqlSelect).use { selectStatement ->
+                    selectStatement.setString(1, id.toString())
+                    val resultSet = selectStatement.executeQuery()
+
+                    if (resultSet.next()) {
+                        deletedTenista = Tenista(
+                            resultSet.getLong(1),
+                            resultSet.getString("nombre"),
+                            resultSet.getString("pais"),
+                            resultSet.getInt("altura"),
+                            resultSet.getInt("peso"),
+                            resultSet.getInt("puntos"),
+                            resultSet.getString("mano"),
+                            fecha_nacimiento = LocalDate.parse(resultSet.getString("fecha_nacimiento")),
+                            createdAt = LocalDateTime.parse(resultSet.getString("created_at")),
+                            updatedAt = LocalDateTime.parse(resultSet.getString("updated_at"))
+                        )
+                    }
+                }
+
+                // Ahora eliminamos el tenista si existe
+                connection.prepareStatement(sqlDelete).use { deleteStatement ->
+                    deleteStatement.setString(1, id.toString())
+                    val rowsAffected = deleteStatement.executeUpdate()
+
+                    if (rowsAffected > 0) {
+                        logger.debug { "Tenista con id: $id eliminado correctamente." }
+                    } else {
+                        logger.warn { "No se encuentra el Tenista con id: $id para eliminar." }
+                    }
+                }
+            } catch (e: SQLException) {
+                logger.error { "Error al eliminar el Tenista: ${e.message}" }
+                e.printStackTrace()
+            }
+        }
+
+        return deletedTenista
     }
 }
